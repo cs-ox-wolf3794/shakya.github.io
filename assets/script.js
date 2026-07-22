@@ -157,6 +157,16 @@
   }
 
   /* -------------------------------------------------------------------
+     Download CV — print the page; the print stylesheet reshapes it into
+     a clean one-pager, and the browser's "Save as PDF" does the rest.
+  ------------------------------------------------------------------- */
+  document.querySelectorAll(".cv-download").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      if (typeof window.print === "function") window.print();
+    });
+  });
+
+  /* -------------------------------------------------------------------
      Scrollspy — highlight the nav link for the section in view
   ------------------------------------------------------------------- */
   var sections = Array.prototype.slice.call(document.querySelectorAll("main section[id]"));

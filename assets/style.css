@@ -384,6 +384,19 @@ img { max-width: 100%; }
 }
 .btn:hover { transform: translateY(-2px); }
 
+.btn.cv-download { cursor: pointer; font-family: inherit; }
+.btn svg {
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  margin-right: 8px;
+}
+
+/* Shown only when printing */
+.print-only { display: none; }
+
 .btn-primary {
   background: var(--ink);
   color: var(--paper);
@@ -765,4 +778,111 @@ img { max-width: 100%; }
   }
   [data-reveal] { opacity: 1; transform: none; }
   .hero-glow, .status-dot, .scroll-cue span { animation: none; }
+}
+
+/* =====================================================================
+   Print — reshape the page into a clean, ~1-page CV.
+   "Download CV" calls window.print(); the reader saves as PDF.
+   ===================================================================== */
+@media print {
+  /* Force ink-on-white regardless of the on-screen theme */
+  :root,
+  :root[data-theme="dark"],
+  :root[data-theme="light"] {
+    --ink: #14181f;
+    --ink-soft: #333a45;
+    --paper: #ffffff;
+    --paper-alt: #ffffff;
+    --card: #ffffff;
+    --line: #c9c4b8;
+    --accent: #9c531f;
+    --accent-2: #9c531f;
+    --accent-soft: #eeeeee;
+  }
+
+  @page { size: A4; margin: 12mm 14mm; }
+
+  html { font-size: 10.5px; }
+  body {
+    background: #fff !important;
+    color: var(--ink) !important;
+    line-height: 1.32;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Hide interactive + decorative chrome and the on-screen-only sections */
+  .site-header, .mobile-nav, .nav-scrim, .scroll-progress, .noise,
+  .hero-glow, .scroll-cue, .to-top, .skip-link,
+  .hero-actions, .hero-photo, .site-footer,
+  #about, #impact, #contact {
+    display: none !important;
+  }
+
+  [data-reveal] { opacity: 1 !important; transform: none !important; }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: none; padding: 0; }
+
+  /* Hero → CV masthead */
+  .hero { padding: 0 0 6px; overflow: visible; }
+  .hero-grid { display: block; }
+  .eyebrow { margin: 0 0 4px; font-size: 8.5px; }
+  .hero h1 { font-size: 25px; line-height: 1.05; margin: 0 0 3px; }
+  .hero-role { font-size: 11.5px; margin: 0 0 6px; }
+  .hero-lede { font-size: 10.3px; max-width: none; margin: 0 0 6px; }
+
+  .print-only { display: block; }
+  .print-contact {
+    font-size: 9.4px;
+    color: var(--ink-soft);
+    margin: 0 0 10px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  /* Sections: compact, single column, no section index */
+  .section {
+    padding: 9px 0 3px;
+    border-top: none;
+    background: #fff !important;
+  }
+  .two-col { display: block; }
+  .col-label { flex-direction: row; gap: 8px; margin: 0 0 6px; position: static; }
+  .section-num { display: none; }
+  .col-label h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--accent);
+  }
+
+  /* Experience — drop the timeline chrome; keep each role intact */
+  .timeline::before { display: none; }
+  .role {
+    padding: 0 0 8px;
+    margin: 0 0 8px;
+    border-bottom: 1px solid var(--line);
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .role::before { display: none; }
+  .role:last-child { border-bottom: none; margin-bottom: 0; }
+  .role-head { margin-bottom: 3px; }
+  .role-head h3 { font-size: 11.5px; }
+  .role-meta { font-size: 9px; }
+  .role ul { padding-left: 16px; }
+  .role li { margin-bottom: 2px; font-size: 9.7px; }
+
+  /* Skills — two tight columns, no card styling */
+  .skills-grid { gap: 6px 24px; margin-bottom: 8px; }
+  .skill-group {
+    padding: 0; border: none; background: none;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .skill-group h4 { font-size: 10px; margin-bottom: 2px; }
+  .skill-group p { font-size: 9.3px; }
+  .education { padding-top: 8px; }
+  .education h4 { font-size: 10px; }
+  .education p { font-size: 9.3px; }
 }

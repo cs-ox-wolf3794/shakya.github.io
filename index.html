@@ -5,6 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shakya Deb Ganguly — Product & Platform Leader</title>
 <meta name="description" content="Shakya Deb Ganguly — Product &amp; Platform leader. Technical delivery, platform strategy, DevOps and data systems.">
+<meta name="author" content="Shakya Deb Ganguly">
+<meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#12151c" media="(prefers-color-scheme: dark)">
+
+<!-- Open Graph / social preview (uses existing title + description, no new claims) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Shakya Deb Ganguly — Product &amp; Platform Leader">
+<meta property="og:description" content="A decade leading platform, data and delivery organisations that other teams — and other companies — build on.">
+<meta property="og:url" content="https://cs-ox-wolf3794.github.io/bio/">
+<meta property="og:image" content="https://cs-ox-wolf3794.github.io/bio/assets/image.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Shakya Deb Ganguly — Product &amp; Platform Leader">
+<meta name="twitter:description" content="A decade leading platform, data and delivery organisations that other teams — and other companies — build on.">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%23b5652e'/><text x='50' y='71' font-size='60' font-family='Georgia,serif' font-weight='600' fill='%23fbfaf7' text-anchor='middle'>S</text></svg>">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -12,57 +28,84 @@
 </head>
 <body>
 
+<a class="skip-link" href="#top">Skip to content</a>
+
+<div class="scroll-progress" aria-hidden="true"><span></span></div>
 <div class="noise" aria-hidden="true"></div>
 
 <header class="site-header">
   <div class="wrap header-inner">
     <a href="#top" class="brand">SDG</a>
-    <nav class="site-nav">
+
+    <nav class="site-nav" aria-label="Primary">
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
       <a href="#impact">Impact</a>
       <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
     </nav>
+
+    <div class="header-tools">
+      <button class="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false" title="Toggle theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><g stroke-linecap="round"><line x1="12" y1="2.5" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="21.5"/><line x1="2.5" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="21.5" y2="12"/><line x1="5.1" y1="5.1" x2="6.8" y2="6.8"/><line x1="17.2" y1="17.2" x2="18.9" y2="18.9"/><line x1="5.1" y1="18.9" x2="6.8" y2="17.2"/><line x1="17.2" y1="6.8" x2="18.9" y2="5.1"/></g></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.3 6.3 0 0 0 10.5 10.5z"/></svg>
+      </button>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
 </header>
+
+<nav id="mobile-nav" class="mobile-nav" aria-label="Mobile" hidden>
+  <a href="#about">About</a>
+  <a href="#experience">Experience</a>
+  <a href="#impact">Impact</a>
+  <a href="#skills">Skills</a>
+  <a href="#contact">Contact</a>
+</nav>
+<div class="nav-scrim" hidden></div>
 
 <main>
 
   <section id="top" class="hero">
+    <div class="hero-glow" aria-hidden="true"></div>
     <div class="wrap">
       <div class="hero-grid">
         <div class="hero-text">
-          <p class="eyebrow">Drammen/Oslo, Norway</p>
-          <h1>Shakya Deb Ganguly</h1>
-          <p class="hero-role">Product &amp; Platform Leader — Technical Delivery, DevOps &amp; Data Systems</p>
-          <p class="hero-lede">
+          <p class="eyebrow" data-reveal><span class="status-dot" aria-hidden="true"></span>Drammen/Oslo, Norway</p>
+          <h1 data-reveal>Shakya Deb Ganguly</h1>
+          <p class="hero-role" data-reveal>Product &amp; Platform Leader — Technical Delivery, DevOps &amp; Data Systems</p>
+          <p class="hero-lede" data-reveal>
             I turn complex technical delivery into durable product outcomes. A decade leading
             platform, data and delivery organisations that other teams — and other companies — build on,
             grounded in an technical background, MSc in Computer Science and a genuine comfort in the engineering room.
           </p>
-          <div class="hero-actions">
+          <div class="hero-actions" data-reveal>
             <a class="btn btn-primary" href="mailto:ganguly.sd@gmail.com">Get in touch</a>
             <a class="btn btn-ghost" href="https://www.linkedin.com/in/shakya-deb-ganguly-ba8a3a21/" target="_blank" rel="noopener">LinkedIn</a>
             <a class="btn btn-ghost" href="https://github.com/cs-ox-wolf3794" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
-        <div class="hero-photo">
+        <div class="hero-photo" data-reveal>
           <img src="assets/image.jpg" alt="Portrait of Shakya Deb Ganguly" width="240" height="240">
         </div>
       </div>
     </div>
+    <a class="scroll-cue" href="#about" aria-label="Scroll to About">
+      <span></span>
+    </a>
   </section>
 
   <section id="about" class="section">
     <div class="wrap two-col">
-      <div class="col-label">
+      <div class="col-label" data-reveal>
         <span class="section-num">01</span>
         <h2>About</h2>
       </div>
-      <div class="col-body">
+      <div class="col-body" data-reveal>
         <p>
-           At <strong>Rystad Energy</strong>, I run the Technical Project & DevOps team ('Product' in SaaS context) behind our energy data
+           At <strong>Rystad Energy</strong>, I run the Technical Project &amp; DevOps team ('Product' in SaaS context) behind our energy data
           platform — owning the full lifecycle from product conception through external release,
           instrumented with observability, usage and performance data from day one. I've sat on the
           Technology department's management team since 2024 and driving the AI adoption across the org since, Dec 2025.
@@ -89,13 +132,13 @@
 
   <section id="experience" class="section alt">
     <div class="wrap two-col">
-      <div class="col-label">
+      <div class="col-label" data-reveal>
         <span class="section-num">02</span>
         <h2>Experience</h2>
       </div>
-      <div class="col-body">
+      <div class="col-body timeline">
 
-        <article class="role">
+        <article class="role" data-reveal>
           <div class="role-head">
             <h3>Principal Technical Project Manager</h3>
             <span class="role-meta">Rystad Energy · Oslo · Jul 2024 – Present</span>
@@ -110,7 +153,7 @@
           </ul>
         </article>
 
-        <article class="role">
+        <article class="role" data-reveal>
           <div class="role-head">
             <h3>Lead Technical Project Manager</h3>
             <span class="role-meta">Rystad Energy · Oslo · Feb 2023 – Jul 2024</span>
@@ -121,7 +164,7 @@
           </ul>
         </article>
 
-        <article class="role">
+        <article class="role" data-reveal>
           <div class="role-head">
             <h3>Senior Project Manager · Sr. Engineering Delivery Manager</h3>
             <span class="role-meta">Cognite · Oslo · Jan 2021 – Jan 2023</span>
@@ -139,7 +182,7 @@
           </ul>
         </article>
 
-        <article class="role role-condensed">
+        <article class="role role-condensed" data-reveal>
           <div class="role-head">
             <h3>Earlier career</h3>
             <span class="role-meta">2009 – 2020</span>
@@ -165,41 +208,41 @@
 
   <section id="impact" class="section">
     <div class="wrap two-col">
-      <div class="col-label">
+      <div class="col-label" data-reveal>
         <span class="section-num">03</span>
         <h2>Selected impact</h2>
       </div>
       <div class="col-body">
         <div class="impact-grid">
-          <div class="impact-card">
+          <div class="impact-card" data-reveal>
             <h4>Platform ownership, end to end</h4>
             <p>Own the full lifecycle of energy data products at Rystad Energy — from ideation to
               release to support hand-over — with observability and usage metrics built in
               from day one, not bolted on after.</p>
           </div>
-          <div class="impact-card">
+          <div class="impact-card" data-reveal>
             <h4>Ecosystem-scale architecture</h4>
             <p>Accountable for modularisation, interoperability and architectural scale on
               Cognite Data Fusion — a platform that became the foundation other products and
               customers were built on.</p>
           </div>
-          <div class="impact-card">
+          <div class="impact-card" data-reveal>
             <h4>Cross-org delivery at scale</h4>
             <p>Owned the customer–engineering relationship across global oil &amp; gas accounts,
               sequencing dependencies and resolving conflicts before they became risks.</p>
           </div>
-          <div class="impact-card">
+          <div class="impact-card" data-reveal>
             <h4>Technical credibility</h4>
             <p>MSc in Computer Science (Oxford); hands-on background in Python and machine
               learning gives me enough fluency to make sound calls alongside Engineering,
               not just above it.</p>
           </div>
-          <div class="impact-card">
+          <div class="impact-card" data-reveal>
             <h4>Team building &amp; coaching</h4>
             <p>Grew delivery and PM teams from the ground up, including global recruitment
               and technical training — the player-coach balance of leading while staying close.</p>
           </div>
-          <div class="impact-card">
+          <div class="impact-card" data-reveal>
             <h4>Regulated, high-stakes systems</h4>
             <p>Built regulatory and compliance reporting systems at JPMorgan, where reliability
               and trust weren't optional — the same discipline that matters in health tech.</p>
@@ -211,33 +254,33 @@
 
   <section id="skills" class="section alt">
     <div class="wrap two-col">
-      <div class="col-label">
+      <div class="col-label" data-reveal>
         <span class="section-num">04</span>
         <h2>Skills</h2>
       </div>
       <div class="col-body">
         <div class="skills-grid">
-          <div class="skill-group">
+          <div class="skill-group" data-reveal>
             <h4>Product &amp; Platform</h4>
             <p>Platform strategy &amp; roadmapping · Cross-team prioritisation · Ecosystem &amp;
               API thinking · Discovery &amp; delivery · PRDs &amp; product practice</p>
           </div>
-          <div class="skill-group">
+          <div class="skill-group" data-reveal>
             <h4>Technical Delivery</h4>
             <p>CI/CD · Observability · Release management · Agile / Scrum / Kanban ·
               Architecture &amp; interoperability</p>
           </div>
-          <div class="skill-group">
+          <div class="skill-group" data-reveal>
             <h4>Data &amp; AI</h4>
             <p>Machine learning · MLOps · Data platforms · Python · SQL</p>
           </div>
-          <div class="skill-group">
+          <div class="skill-group" data-reveal>
             <h4>Leadership</h4>
             <p>Team coaching &amp; development · Global recruitment · Stakeholder management ·
               Executive communication</p>
           </div>
         </div>
-        <div class="education">
+        <div class="education" data-reveal>
           <h4>Education</h4>
           <p>MSc Computer Science, University of Oxford — research in computational linguistics
             and sentiment analysis.</p>
@@ -248,15 +291,38 @@
 
   <section id="contact" class="section contact-section">
     <div class="wrap">
-      <span class="section-num">05</span>
-      <h2>Let's talk</h2>
-      <p class="contact-lede">
+      <span class="section-num" data-reveal>05</span>
+      <h2 data-reveal>Let's talk</h2>
+      <p class="contact-lede" data-reveal>
         Based in Drammen, Norway - I am always open for talks, coffee chats and product discussions in Drammen or Oslo or anywhere in between.
       </p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="mailto:your.email@example.com">ganguly.sd@gmail.com</a>
+      <div class="hero-actions" data-reveal>
+        <a class="btn btn-primary" href="mailto:ganguly.sd@gmail.com">ganguly.sd@gmail.com</a>
         <a class="btn btn-ghost" href="https://www.linkedin.com/in/shakya-deb-ganguly-ba8a3a21/" target="_blank" rel="noopener">LinkedIn</a>
         <a class="btn btn-ghost" href="https://github.com/cs-ox-wolf3794" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
   </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span class="footer-brand">Shakya Deb Ganguly</span>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#impact">Impact</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<button class="to-top" type="button" aria-label="Back to top" hidden>
+  <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 19V6M6 12l6-6 6 6"/></svg>
+</button>
+
+<script src="assets/script.js" defer></script>
+</body>
+</html>
